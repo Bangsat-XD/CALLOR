@@ -24,7 +24,7 @@ Dan Jika Ingin Di Ganti Izin Dulu :v
 
 #####################################
 def banner(): 
-    print("\n%s __  ____ _____  __**********___ _____ %s® \n%s /  \/  /__ )/  )__ ____/  /__ ) \n%s /   /___) /  __ )/  __  /___) / \n%s /  /\/ / __ /  / / /  (_/ / __ / \n%s/__/ /_/(______/__/ /_/(______/(______/ V2.0.1\n=================================================\n%s╔══◍➤Desigen By : Raka Andrian Tara\n%s╠══◍➤Github : https://github.com/Garangan-Z\n%s╚══◍➤Instagram : raka_andrian27\n%s=================================================\n"%(O,K,O,O,O,O,O,O,O,O))
+	print("\n%s __  ____ _____  __**********___ _____ %s® \n%s /  \/  /__ )/  )__ ____/  /__ ) \n%s /   /___) /  __ )/  __  /___) / \n%s /  /\/ / __ /  / / /  (_/ / __ / \n%s/__/ /_/(______/__/ /_/(______/(______/ V2.0.1\n=================================================\n%s╔══◍➤Desigen By : Raka Andrian Tara\n%s╠══◍➤Github : https://github.com/Garangan-Z\n%s╚══◍➤Instagram : raka_andrian27\n%s=================================================\n"%(O,K,O,O,O,O,O,O,O,O))
 url=('http://ipinfo.io/json')
 response=urlopen(url)
 data=json.load(response)
