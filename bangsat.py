@@ -24,17 +24,16 @@ Dan Jika Ingin Di Ganti Izin Dulu :v
 
 #####################################
 def logo(): 
-	print("%s __  ____ _____  __**********___ _____ %s® 
-%s /  \/  /__ )/  )__ ____/  /__ ) 
-%s /   /___) /  __ )/  __  /___) / 
-%s /  /\/ / __ /  / / /  (_/ / __ / 
-%s/__/ /_/(______/__/ /_/(______/(______/ V2.0.1
+	print("""__  ____ _____  __**********___ _____ %s® 
+ /  \/  /__ )/  )__ ____/  /__ ) 
+ /   /___) /  __ )/  __  /___) / 
+ /  /\/ / __ /  / / /  (_/ / __ / 
+/__/ /_/(______/__/ /_/(______/(______/ V2.0.1
 =================================================
-%s╔══◍➤Desigen By : Raka Andrian Tara
-%s╠══◍➤Github : https://github.com/Garangan-Z
-%s╚══◍➤Instagram : raka_andrian27
-%s=================================================
-"%(O,K,O,O,O,O,O,O,O,O))
+╔══◍➤Desigen By : Raka Andrian Tara
+╠══◍➤Github : https://github.com/Garangan-Z
+╚══◍➤Instagram : raka_andrian27
+=================================================""")
 url=('http://ipinfo.io/json')
 response=urlopen(url)
 data=json.load(response)
