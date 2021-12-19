@@ -23,16 +23,8 @@ Dan Jika Ingin Di Ganti Izin Dulu :v
 
 
 #####################################
-logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
-\x1b[1;92m| _ \ _ \ __|  \/  |_ _| | | |  \/  |
-\x1b[1;96m|  _/   / _|| |\/| || || |_| | |\/| |
-\x1b[1;96m|_| |_|_\___|_|  |_|___|\___/|_|  |_|
-\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
-\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m au : Bangsat-XD
-\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m Tw : Bangsat_XD
-\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m gh : github.com/Bangsat-XD
-\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
-""")
+def banner(): print("\n%s __  ____ _____  __**********___ _____ %s® \n%s /  \/  /__ )/  )__ ____/  /__ ) \n%s /   /___) /  __ )/  __  /___) / \n%s /  /\/ / __ /  / / /  (_/ / __ / \n%s/__/ /_/(______/__/ /_/(______/(______/ V2.0.1\n=================================================\n%s╔══◍➤Desigen By : Raka Andrian Tara\n%s╠══◍➤Github : https://github.com/Garangan-Z\n%s╚══◍➤Instagram : raka_andrian27\n%s=================================================\n"%(O,K,O,O,O,O,O,O,O,O))
+def menu_log():
 url=('http://ipinfo.io/json')
 response=urlopen(url)
 data=json.load(response)
