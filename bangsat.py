@@ -54,7 +54,7 @@ def login():
 		exit("\x1b[1;93m╚══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
 	elif login == "1":
                 try:
-			token=raw_input("\x1b[1;96m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Token  :\x1b[1;92m ")
+			token=raw_input("\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Token  :\x1b[1;96m ")
                         cek=requests.get('https://graph.facebook.com/me?access_token='+token)
                         y=json.loads(cek.text)
                         nama = y['name']
