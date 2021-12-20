@@ -67,7 +67,7 @@ def login():
 	elif login == "2":
 		print("\x1b[1;96m╚══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Youtube")
 		time.sleep(2)
-		os.system("xdg-open https://youtu.be/3Y6xsMB3wRg")
+		os.system("xdg-open https://youtu.be/bszAm4C5ovE")
 		exit()
 	elif login == "0":
 		exit()
