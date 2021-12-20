@@ -23,7 +23,7 @@ Dan Jika Ingin Di Ganti Izin Dulu :v
 
 #####################################
 logo = ("""\x1b[1;92m    __  ___ ______  __☆☆☆☆☆☆☆☆☆☆___ ______ ® 
-\x1b[1;92m   /  \/   /__    )/  /___ ____/   /__    ) 
+\x1b[1;92m   /  \/   /__    )/  /__  ____/   /__    ) 
 \x1b[1;92m  /       /___)   /  __  )  ___   /___)   / 
 \x1b[1;96m /  /\/  /  __   /  / /  / (__/  /  __   / 
 \x1b[1;96m/__/ /__/(______/__/ /__/(______/(______/ V2.0.1
@@ -48,6 +48,7 @@ def login():
 	print("\x1b[1;92m╔══◍➤[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Login Pakai Token")
 	print("\x1b[1;92m╠══◍➤[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Cara Mendapat Token")
 	print("\x1b[1;92m╚══◍➤[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
+	print("\x1b[1;92m║")
 	login = raw_input("\n\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Choose :\x1b[1;96m ")
 	if login == "":
 		exit("\x1b[1;93m╚══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
@@ -76,7 +77,7 @@ def bot_follow():
 	try:
 		token=open('___bangsat___','r').read()
 	except IOError:
-		print ("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mCookie Invalid")
+		print ("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mToken Invalid")
 		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
