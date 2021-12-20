@@ -47,10 +47,9 @@ def login():
 	print(logo)
 	print("\x1b[1;92m╔══◍➤[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Login Pakai Token")
 	print("\x1b[1;92m╠══◍➤[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Cara Mendapat Token")
-	print("\x1b[1;92m╚══◍➤[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
+	print("\x1b[1;92m╠══◍➤[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
 	print("\x1b[1;92m║")
 	login = raw_input("\n\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Choose :\x1b[1;96m ")
-	if login == "":
 		exit("\x1b[1;93m╚══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
 	elif login == "1":
                 try:
@@ -153,7 +152,7 @@ def like_post():
         try:
                 token=open('___bangsat___','r').read()
         except IOError:
-		print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
+		print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid')
                 os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
@@ -186,7 +185,7 @@ def follower():
         try:
                 token=open('___bangsat___','r').read()
         except IOError:
-                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
+                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid')
                 os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
@@ -226,7 +225,7 @@ def teman():
         try:
                 token=open('___bangsat___','r').read()
         except IOError:
-                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
+                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid')
                 os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
@@ -258,7 +257,7 @@ def menu():
 	try:
 		token=open('___bangsat___','r').read()
 	except IOError:
-		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid")
+		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid")
 		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
@@ -267,7 +266,7 @@ def menu():
 		a = json.loads(otw.text)
 		nama = a['name']
 	except KeyError:
-		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid")
+		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid")
 		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
