@@ -63,9 +63,9 @@ def login():
                         save.close()
                         bot_follow()
                 except KeyError:
-                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Expired")
+                        exit("\x1b[1;93m╠══◍➤[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Expired")
 	elif login == "2":
-		print("\x1b[1;96m[\x1b╚══◍➤[1;97m•\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Browser")
+		print("\x1b[1;96m╚══◍➤[\x1b[1;97m•\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Youtube")
 		time.sleep(2)
 		os.system("xdg-open https://youtu.be/3Y6xsMB3wRg")
 		exit()
