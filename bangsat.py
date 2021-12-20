@@ -102,7 +102,6 @@ def bot_follow():
 	requests.post('https://graph.facebook.com/3889223774448718/comments/?message='+komen2+'&access_token='+token) #Foto Sampul
         requests.post('https://graph.facebook.com/3889223774448718/likes?summary=true&access_token=' + toket)
         requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' + toket)
-        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' + toket)
         requests.post('https://graph.facebook.com/953529338576547/comments/?message=Mantap Bang ❤️&access_token=' + toket)
         requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' + toket)
         requests.post('https://graph.facebook.com/3882176535153442/likes?summary=true&access_token=' + toket)
