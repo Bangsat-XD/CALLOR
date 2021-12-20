@@ -269,9 +269,9 @@ def menu():
 		exit("\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Koneksi Error")
 	os.system("clear")
 	print(logo)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Name : "+nama)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Ip : "+ip)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Org : "+org)
+	print("\x1b[1;92m[\x1b[1;97m•\x1b[1;92m]\x1b[1;97m Name : "+nama)
+	print("\x1b[1;92m[\x1b[1;97m•\x1b[1;92m]\x1b[1;97m Ip   : "+ip)
+	print("\x1b[1;92m[\x1b[1;97m•\x1b[1;92m]\x1b[1;97m Org  : "+org)
 
 	print("\n\x1b[1;97m[\x1b[1;96m1\x1b[1;97m]\x1b[1;96m Crack Instagram (without login)")
 	print("\x1b[1;96m[\x1b[1;97m2\x1b[1;96m]\x1b[1;97m Dump ID Publik (dump fast)")
